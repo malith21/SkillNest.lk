@@ -1,8 +1,4 @@
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1565C0,100:42A5F5&height=200&section=header&text=SkillNest.lk&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Academic%20%26%20Online%20Resources%20Management%20System%20%7C%20MERN%20Stack&descAlignY=58&descSize=18&animation=fadeIn"/>
-
-</div>
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:1565C0,100:42A5F5&height=200&section=header&text=SkillNest.lk&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Academic%20%26%20Online%20Resources%20Management%20System%20%7C%20MERN%20Stack&descAlignY=58&descSize=18&animation=fadeIn)
 
 # 🌟 SkillNest.lk — Academic & Online Resources Management System
 ### MERN Full-Stack CRUD Application | WE_314_2.2
@@ -267,8 +263,4 @@ After running `node seed.js`:
 - IT23698918 — Lakshan W.A.K.T.K (Module 2: Peer Help & Ticketing)
 - IT23715110 — Yasintha W.K.M (Module 3: Study Resources)
 
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:42A5F5,100:1565C0&height=100&section=footer"/>
-
-</div>
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:42A5F5,100:1565C0&height=100&section=footer)
