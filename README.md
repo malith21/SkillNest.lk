@@ -1,60 +1,93 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:1565C0,100:42A5F5&height=200&section=header&text=SkillNest.lk&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Academic%20%26%20Online%20Resources%20Management%20System%20%7C%20MERN%20Stack&descAlignY=58&descSize=18&animation=fadeIn)
+<div align="center">
 
-# 🌟 SkillNest.lk — Academic & Online Resources Management System
-### MERN Full-Stack CRUD Application | WE_314_2.2
+![header](https://capsule-render.vercel.app/api?type=waving\&color=0:1565C0,100:42A5F5\&height=220\&section=header\&text=SkillNest.lk\&fontSize=58\&fontColor=ffffff\&animation=fadeIn)
+
+# 🌟 SkillNest.lk
+
+### Academic & Online Resources Management System
+
+![MERN](https://img.shields.io/badge/MERN-Stack-00ED64?style=for-the-badge\&logo=mongodb\&logoColor=white)
+![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge\&logo=react\&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=node.js\&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge\&logo=express\&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-6+-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
+
+**MERN Full-Stack CRUD Application | WE_314_2.2**
+
+A centralized platform for academic resource sharing, tutor support, peer collaboration, and AI-powered study assistance.
+
+</div>
 
 ---
 
 ## 📋 Table of Contents
-1. [Prerequisites](#prerequisites)
-2. [Project Structure](#project-structure)
-3. [Setup Instructions](#setup-instructions)
-4. [Running the App](#running-the-app)
-5. [Demo Accounts](#demo-accounts)
-6. [Module Overview](#module-overview)
-7. [API Endpoints](#api-endpoints)
+
+* [Prerequisites](#-prerequisites)
+* [Project Structure](#-project-structure)
+* [Setup Instructions](#-setup-instructions)
+* [Running the App](#-running-the-app)
+* [Demo Accounts](#-demo-accounts)
+* [Module Overview](#-module-overview)
+* [API Endpoints](#-api-endpoints)
+* [Common Issues](#-common-issues)
+* [Team](#-team)
+
+---
+
+## 🎯 Project Overview
+
+SkillNest.lk is a comprehensive Academic & Online Resources Management System developed using the MERN Stack. The platform enables students, tutors, and administrators to collaborate efficiently through resource sharing, academic profiling, ticket-based support, and AI-powered learning assistance.
+
+### Key Features
+
+✅ JWT Authentication & Authorization
+✅ Academic Profile Management
+✅ Tutor & Peer Support Ticketing System
+✅ Real-Time Chat using Socket.IO
+✅ Resource Upload & Sharing
+✅ Bookmark & Rating System
+✅ AI Notes Summarizer
+✅ Admin Approval Workflow
+✅ Responsive Modern UI
 
 ---
 
 ## ✅ Prerequisites
 
-Install these on your laptop before starting:
+| Tool    | Version |
+| ------- | ------- |
+| Node.js | v18+    |
+| MongoDB | v6+     |
+| npm     | v9+     |
 
-| Tool | Version | Download |
-|------|---------|----------|
-| Node.js | v18+ | https://nodejs.org |
-| MongoDB | v6+ | https://www.mongodb.com/try/download/community |
-| npm | v9+ (comes with Node) | — |
-
-> **Check versions:**
-> ```bash
-> node -v
-> npm -v
-> mongod --version
-> ```
+```bash
+node -v
+npm -v
+mongod --version
+```
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 skillnest/
-├── backend/                  ← Express + MongoDB API
-│   ├── models/               ← Mongoose schemas (User, Ticket, Message, Resource)
-│   ├── routes/               ← REST API routes
-│   ├── middleware/           ← JWT auth middleware
-│   ├── uploads/              ← Uploaded files (auto-created)
-│   ├── .env                  ← Environment variables
-│   ├── server.js             ← Entry point
-│   └── seed.js               ← Demo data seeder
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── uploads/
+│   ├── .env
+│   ├── server.js
+│   └── seed.js
 │
-└── frontend/                 ← React application
+└── frontend/
     ├── src/
-    │   ├── context/          ← Auth context
-    │   ├── pages/            ← All page components
-    │   ├── components/       ← Shared components
-    │   ├── App.js            ← Routing
-    │   └── index.css         ← Global styles (blue gradient theme)
+    │   ├── context/
+    │   ├── pages/
+    │   ├── components/
+    │   ├── App.js
+    │   └── index.css
     └── public/
 ```
 
@@ -62,205 +95,210 @@ skillnest/
 
 ## 🚀 Setup Instructions
 
-### Step 1 — Start MongoDB
+### 1️⃣ Clone Repository
 
-**Windows:**
 ```bash
-# Open MongoDB Compass OR run:
-mongod --dbpath C:\data\db
+git clone https://github.com/YOUR_USERNAME/skillnest.git
+cd skillnest
 ```
 
-**Mac/Linux:**
-```bash
-mongod
-# or
-brew services start mongodb-community
-```
-
----
-
-### Step 2 — Setup Backend
+### 2️⃣ Backend Setup
 
 ```bash
-# Navigate to backend
-cd skillnest/backend
+cd backend
 
-# Install dependencies
 npm install
 
-# The .env file is already created with defaults:
-# PORT=5000
-# MONGO_URI=mongodb://localhost:27017/skillnest
-# JWT_SECRET=skillnest_super_secret_key_2024
-
-# Seed demo data (optional but recommended)
 node seed.js
 
-# Start backend server
 npm run dev
 ```
 
-✅ Backend running at: **http://localhost:5000**
+Backend:
 
----
+```text
+http://localhost:5000
+```
 
-### Step 3 — Setup Frontend
+### 3️⃣ Frontend Setup
 
-Open a **new terminal window**:
+Open a new terminal:
 
 ```bash
-# Navigate to frontend
-cd skillnest/frontend
+cd frontend
 
-# Install dependencies
 npm install
 
-# Start React app
 npm start
 ```
 
-✅ Frontend running at: **http://localhost:3000**
+Frontend:
+
+```text
+http://localhost:3000
+```
 
 ---
 
-## 🎮 Running the App
+## 🎮 Running the Application
 
-You need **2 terminal windows** open:
-
-| Terminal | Command | URL |
-|----------|---------|-----|
-| Terminal 1 | `cd backend && npm run dev` | http://localhost:5000 |
-| Terminal 2 | `cd frontend && npm start` | http://localhost:3000 |
-
-Open your browser and go to: **http://localhost:3000**
+| Service  | Command     | URL            |
+| -------- | ----------- | -------------- |
+| Backend  | npm run dev | localhost:5000 |
+| Frontend | npm start   | localhost:3000 |
 
 ---
 
 ## 👥 Demo Accounts
 
-After running `node seed.js`:
-
-| Role | Email | Password |
-|------|-------|----------|
-| 🛡️ Admin | admin@skillnest.lk | password123 |
-| 👨‍🏫 Tutor | kamal@skillnest.lk | password123 |
-| 👨‍🏫 Tutor | nimali@skillnest.lk | password123 |
-| 🎓 Student | david@skillnest.lk | password123 |
-| 🎓 Student | amara@skillnest.lk | password123 |
+| Role        | Email                                             | Password    |
+| ----------- | ------------------------------------------------- | ----------- |
+| 🛡️ Admin   | [admin@skillnest.lk](mailto:admin@skillnest.lk)   | password123 |
+| 👨‍🏫 Tutor | [kamal@skillnest.lk](mailto:kamal@skillnest.lk)   | password123 |
+| 👨‍🏫 Tutor | [nimali@skillnest.lk](mailto:nimali@skillnest.lk) | password123 |
+| 🎓 Student  | [david@skillnest.lk](mailto:david@skillnest.lk)   | password123 |
+| 🎓 Student  | [amara@skillnest.lk](mailto:amara@skillnest.lk)   | password123 |
 
 ---
 
 ## 📦 Module Overview
 
-### Module 1 — User Management & Academic Profiling
-- Role-based login (Student / Tutor / Admin) with modal popup
-- JWT authentication with bcrypt password hashing
-- Multi-step academic profile form (4 steps)
-- Degree program, semester, subjects, GPA tracking
-- Skills assessment with star ratings & strength/weakness tagging
-- Profile completion progress bar + circular chart
-- Change password, recent activity, account settings
-- Admin: full user management CRUD table
+### 👤 Module 01 — User Management & Academic Profiling
 
-### Module 2 — Peer Help, Tutor Support, Quiz & Assignment Help
-- Ticketing system: 4-step ticket creation wizard
-- Help types: Peer Help, Tutor Support, Quiz Help, Assignment Help
-- Auto-match with available tutors by module
-- Ticket management: Open → In Progress → Resolved → Closed
-- Real-time chat per ticket using Socket.IO
-- Ticket status filtering and priority levels (Low/Medium/High)
-- Student & tutor dashboard views
+* JWT Authentication
+* Role-Based Access Control
+* Academic Profile Builder
+* GPA Tracking
+* Skill Assessment
+* User Management Dashboard
 
-### Module 3 — Study Resources & Notes Sharing
-- Upload PDFs and external links
-- Subject + semester categorization with tags
-- Search & filter by subject, semester, type, keyword
-- Bookmark system (per user)
-- 5-star rating system
-- Admin approval workflow (Pending → Approved/Rejected)
-- 🤖 AI Notes Summarizer — generates summary + key points from any resource
-- Download counter tracking
+### 🎫 Module 02 — Peer Help & Tutor Support
+
+* Ticket Creation Wizard
+* Tutor Matching
+* Ticket Tracking
+* Real-Time Messaging
+* Priority Management
+
+### 📚 Module 03 — Study Resources & Notes Sharing
+
+* PDF Uploads
+* Resource Categorization
+* Search & Filtering
+* Bookmark System
+* Rating System
+* Admin Approval Workflow
+* AI Notes Summarizer
 
 ---
 
 ## 🔌 API Endpoints
 
-### Auth
-| Method | URL | Description |
-|--------|-----|-------------|
-| POST | /api/auth/register | Register user |
-| POST | /api/auth/login | Login |
-| GET | /api/auth/me | Get current user |
-| PUT | /api/auth/change-password | Change password |
+### Authentication
+
+```http
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/auth/me
+PUT  /api/auth/change-password
+```
 
 ### Users
-| Method | URL | Description |
-|--------|-----|-------------|
-| GET | /api/users | Get all users (admin) |
-| GET | /api/users/:id | Get user by ID |
-| PUT | /api/users/:id | Update profile |
-| DELETE | /api/users/:id | Delete user (admin) |
+
+```http
+GET    /api/users
+GET    /api/users/:id
+PUT    /api/users/:id
+DELETE /api/users/:id
+```
 
 ### Tickets
-| Method | URL | Description |
-|--------|-----|-------------|
-| GET | /api/tickets | Get my tickets |
-| POST | /api/tickets | Create ticket |
-| GET | /api/tickets/:id | Get ticket detail |
-| PUT | /api/tickets/:id | Update status |
-| DELETE | /api/tickets/:id | Delete ticket |
+
+```http
+GET    /api/tickets
+POST   /api/tickets
+GET    /api/tickets/:id
+PUT    /api/tickets/:id
+DELETE /api/tickets/:id
+```
 
 ### Messages
-| Method | URL | Description |
-|--------|-----|-------------|
-| GET | /api/messages/:ticketId | Get chat messages |
-| POST | /api/messages | Send message |
-| DELETE | /api/messages/:id | Delete message |
+
+```http
+GET    /api/messages/:ticketId
+POST   /api/messages
+DELETE /api/messages/:id
+```
 
 ### Resources
-| Method | URL | Description |
-|--------|-----|-------------|
-| GET | /api/resources | List with filters |
-| POST | /api/resources | Upload resource |
-| GET | /api/resources/:id | Get resource |
-| PUT | /api/resources/:id | Update resource |
-| DELETE | /api/resources/:id | Delete resource |
-| POST | /api/resources/:id/bookmark | Toggle bookmark |
-| POST | /api/resources/:id/rate | Rate resource |
-| POST | /api/resources/:id/approve | Admin approve/reject |
-| POST | /api/resources/:id/ai-summary | Generate AI summary |
 
-### Tutors
-| Method | URL | Description |
-|--------|-----|-------------|
-| GET | /api/tutors?module=xxx | Get tutors by module |
+```http
+GET    /api/resources
+POST   /api/resources
+GET    /api/resources/:id
+PUT    /api/resources/:id
+DELETE /api/resources/:id
+POST   /api/resources/:id/bookmark
+POST   /api/resources/:id/rate
+POST   /api/resources/:id/approve
+POST   /api/resources/:id/ai-summary
+```
 
 ---
 
 ## 🛠️ Common Issues
 
-**MongoDB not connecting?**
-- Make sure MongoDB service is running
-- Check MONGO_URI in `.env` file
+### MongoDB Connection Error
 
-**Port already in use?**
-- Change PORT in `.env` (e.g., 5001)
-- Update the `proxy` in `frontend/package.json` to match
+```bash
+mongod
+```
 
-**npm install fails?**
-- Delete `node_modules` folder and `package-lock.json`, then retry
-- Make sure Node.js v18+ is installed
+Verify your `.env` file:
 
-**CORS error?**
-- Make sure backend is running on port 5000
-- Check `frontend/package.json` proxy setting
+```env
+MONGO_URI=mongodb://localhost:27017/skillnest
+```
+
+### Port Already In Use
+
+Change:
+
+```env
+PORT=5001
+```
+
+Then update the frontend proxy accordingly.
+
+### npm Install Errors
+
+```bash
+rm -rf node_modules
+rm package-lock.json
+
+npm install
+```
 
 ---
 
-## 👨‍💻 Team
-**WE_314_2.2 — SLIIT**
-- IT23617100 — S.S Pathiranage (Module 1: User Management)
-- IT23698918 — Lakshan W.A.K.T.K (Module 2: Peer Help & Ticketing)
-- IT23715110 — Yasintha W.K.M (Module 3: Study Resources)
+## 👨‍💻 Development Team
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:42A5F5,100:1565C0&height=100&section=footer)
+### WE_314_2.2 — SLIIT
+
+| Student ID | Member            | Responsibility                       |
+| ---------- | ----------------- | ------------------------------------ |
+| IT23617100 | S.S Pathiranage   | User Management & Academic Profiling |
+| IT23698918 | Lakshan W.A.K.T.K | Peer Help & Ticketing System         |
+| IT23715110 | W.K.M. Yasintha   | Study Resources & AI Features        |
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving it a star!
+
+Made with ❤️ using MERN Stack
+
+</div>
+
+![footer](https://capsule-render.vercel.app/api?type=waving\&color=0:42A5F5,100:1565C0\&height=120\&section=footer)
